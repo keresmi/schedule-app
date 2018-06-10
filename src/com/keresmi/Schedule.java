@@ -24,9 +24,19 @@ public class Schedule {
         meetings.add(meeting);
     }
 
+    //Overloading
+    public void addMeeting(String name, int dayOfMonth, Month month, Day day, Address address) {
+        Meeting meeting = new Meeting(name, dayOfMonth, month, day, address);
+        meetings.add(meeting);
+    }
+
     public void showAll() {
         for (Meeting meeting : meetings) {
             System.out.println(meeting.toString());
         }
+    }
+
+    public int meetingsCount() {
+        return meetings.size();
     }
 }
